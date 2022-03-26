@@ -11,4 +11,3 @@ Name: YeongRo Yun
 
 ## Extracurricular Activities
 2022.03 - present: DevKor, a circle for developers
-
