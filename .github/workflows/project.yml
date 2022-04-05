@@ -8,7 +8,7 @@ on:
 
 jobs:
   raise-issue:
-    if: github.event.issues.types == 'opened'
+    if: github.event.issue.types == 'opened'
     runs-on: ubuntu-latest
     steps:
       - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
@@ -18,7 +18,7 @@ jobs:
           repo-token: ${{secrets.project}}
   
   assign-issue:
-    if: github.event.issues.types == 'assigned'
+    if: github.event.issue.types == 'assigned'
     runs-on: ubuntu-latest
     steps:
       - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
@@ -28,7 +28,7 @@ jobs:
           repo-token: ${{secrets.project}}
   
   close-issue:
-    if: github.event.issues.types == 'closed'
+    if: github.event.issue.types == 'closed'
     runs-on: ubuntu-latest
     steps:
       - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
