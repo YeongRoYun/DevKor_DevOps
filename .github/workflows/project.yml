@@ -1,4 +1,4 @@
-name: raise-issue
+name: project
 on:
   issues:
     types:
