@@ -15,7 +15,7 @@ jobs:
         with:
           project: DevKor_DevOps
           column: To do
-          repo-token: ${{secrets.issues}}
+          repo-token: ${{secrets.project}}
   
   assign-issue:
     if: ${{github.event.issues.action == 'assigned'}}
