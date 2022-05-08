@@ -6,8 +6,9 @@ DevOps
 ## Author
 Name: YeongRo Yun
 
-## Education
-2018.03 - present: Computer Science and Engineering, Korea University
-
-## Extracurricular Activities
-2022.03 - present: DevKor, a circle for developers
+## Progress
+DB 구성 (80%)
+기초 API 설계 및 구현(50%)
+상태 코드 구성(50%)
+사용자 인증 및 서비스 사용량 제어(0%)
+CORS(0%)
