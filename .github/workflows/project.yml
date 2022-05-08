@@ -1,4 +1,4 @@
-name: raise-issue
+name: project
 on:
   issues:
     types:
@@ -8,33 +8,33 @@ on:
 
 jobs:
   raise-issue:
-    if: github.event.issues == 'opened'
+    if: github.event.action == 'opened'
     runs-on: ubuntu-latest
     steps:
       - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
         with:
           project: DevKor_DevOps
           column: To do
-          repo-token: ${{secrets.issues}}
+          repo-token: ${{secrets.project}}
   
   assign-issue:
-    if: github.event.issues == 'assigned'
+    if: github.event.action == 'assigned'
     runs-on: ubuntu-latest
     steps:
       - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
         with:
           project: DevKor_DevOps
           column: In progress
-          repo-token: ${{secrets.issues}}
+          repo-token: ${{secrets.project}}
   
   close-issue:
-    if: github.event.issues == 'closed'
+    if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
       - uses: alex-page/github-project-automation-plus@5bcba1c1c091a222584d10913e5c060d32c44044
-          with:
-            project: DevKor_DevOps
-            column: Done
-            repo-token: ${{secrets.issues}}
+        with:
+          project: DevKor_DevOps
+          column: Done
+          repo-token: ${{secrets.project}}
         
     
