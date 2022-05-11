@@ -59,6 +59,12 @@ module.exports = class {
             const ret = await this.parent.client.exists(key, (err) => console.error('ERROR: USER EXIST'));
             return (ret !== 0) ? true : false;
         };
+        /*
+        user:1000:
+            fieid1 v1,  //string
+            field2 v2, //string ,binary object 
+        user:1000:tags <== set 
+        */
         async set(name, type) {
             const id = await this.parent.client.incr('userId', (err)=>console.error('ERROR: USER SET'));
             const key = this.parent.getKey('users', id);
