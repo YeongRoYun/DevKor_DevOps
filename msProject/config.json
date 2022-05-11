@@ -1,0 +1,19 @@
+{
+    "codeDir": "./code",
+    "testDir": "./test",
+
+    "codeList": ["code01.py", "code02.py", "code03.py", "code04.py"],
+    "codeDependency": {
+        "code01.py": ["code02.py", "code03.py", "code04.py"],
+        "code02.py": ["code03.py", "code04.py"],
+        "code03.py": ["code04.py"],
+        "code04.py": []
+    },
+
+    "codeAndTestRelation": {
+        "code01.py": "code01Test.py",
+        "code02.py": "code02Test.py",
+        "code03.py": "code03Test.py",
+        "code04.py": "code04Test.py"
+    }
+}
